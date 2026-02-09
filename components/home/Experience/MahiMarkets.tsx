@@ -17,9 +17,9 @@ const MahiMarkets = () => {
         </section>
 
         <ul className="list-disc list-outside pl-6 flex flex-col gap-1 text-slate-400">
-            <li>Shipping features via a Typescript, Redux, & React client, including order blotters and promotional websites.</li>
-            <li>Building FIX adaptors and REST APIs, testing inbound/outbound FIX connections with clients.</li>
-            <li>Rotational support duty, working on call for 12hr shifts.</li>
+            <li>Engineered FIX adaptors and REST APIs in Java 17; deployed trading systems to AWS-hosted Linux environments; completed full end-to-end connectivity testing with FX brokers and liquidity providers.</li>
+            <li>Delivered trading-critical, trader-facing features, including data-intensive dashboards, interactive trade blotters, and modals used daily by FX traders.</li>
+            <li>Extensively used Linux for system monitoring and log analysis while providing production support.</li>
         </ul>
 
         <ul className="flex flex-row gap-3 flex-wrap">

@@ -6,20 +6,20 @@ const technologies = [
     'SQL',
     'Vue',
     'Typescript',
-    'Equities',
+    'Equity - Portfolio Management',
 ]
 
 const Vanguard = () => {
     return <section className="flex flex-col gap-4 py-6">
         <section>
             <h3 className="text-lg text-slate-200">Vanguard - Full Stack Application Engineer</h3>
-            <span className="text-slate-400 text-xs">April 2023 - Present</span>
+            <span className="text-slate-400 text-xs">April 2023 - November 2025</span>
         </section>
 
         <ul className="list-disc list-outside pl-6 flex flex-col gap-1 text-slate-400">
-            <li>Building requirements for the Java service, e.g. improving settlement date logic to implement updates received from data providers and calculating dynamic benchmarks for the funds to follow intraday. </li>
-            <li>Integration and unit testing all functionality with Spock and Groovy for the service, cypress and vitest for the client.</li>
-            <li>Bulding UI features in the Vue client, aided by the PrimeVue component library and PrimeFlex css utility library.</li>
+            <li>Delivered and enhanced real-time Java 21 portfolio management systems used by portfolio managers globally, supporting trillions in assets with high scalability and resilience.</li>
+            <li>Deployed and maintained event-driven AWS infrastructure (SQS, SNS, AppSync, Lambda) across multiple regions, ensuring high availability, fault tolerance, and low-latency trade data processing.</li>
+            <li>Enhanced portfolio manager workflows via custom UI development, enabling seamless sign-off, allocation, and fund rebalancing through risk-controlled, one-click operations.</li>
         </ul>
 
         <ul className="flex flex-row gap-3 flex-wrap">
