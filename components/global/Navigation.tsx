@@ -7,32 +7,34 @@ import {
 } from '@ant-design/icons'
 import {SocialItem} from '@/components/home/HomeTypes'
 
-type OwnProps = {
-    activeTabKey: string
-    handleTabChange: any
-}
-
 enum NavigationTabs {
-    HOME = 'Home',
+    SERVICES = 'Services',
+    CV = 'CV',
     BLOG = 'Blog',
     PROJECTS = 'Projects',
 }
 
 const navTabs: NavigationTabs[] = [
-    NavigationTabs.HOME,
+    NavigationTabs.SERVICES,
+    NavigationTabs.CV,
     NavigationTabs.BLOG,
     NavigationTabs.PROJECTS,
 ]
 
 const socials: SocialItem[] = [
-    { icon: <LinkedinFilled />, href: 'https://www.linkedin.com/in/lewis-broadhurst/' },
-    { icon: <GithubOutlined />, href: 'https://github.com/LewisBroadhurst' },
-    { icon: <YoutubeFilled />, href: 'https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw' },
-    { icon: <MediumSquareFilled />, href: 'https://medium.com/@lewis1broadhurst' },
+    {icon: <LinkedinFilled/>, href: 'https://www.linkedin.com/in/lewis-broadhurst/'},
+    {icon: <GithubOutlined/>, href: 'https://github.com/LewisBroadhurst'},
+    {icon: <YoutubeFilled/>, href: 'https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw'},
+    {icon: <MediumSquareFilled/>, href: 'https://medium.com/@lewis1broadhurst'},
 ]
 
-const Navigation: FC<OwnProps> = ({activeTabKey, handleTabChange}) => {
-    return <nav className="flex  flex-col lg:flex-row lg:items-center lg:gap-4 xl:gap-12">
+type OwnProps = {
+    activeTabKey: string;
+    handleTabChange: any;
+}
+
+const Navigation: FC<OwnProps> = ({activeTabKey, handleTabChange}) => (
+    <nav className="flex flex-col lg:flex-row lg:items-center lg:gap-4 xl:gap-12">
         <ul className="flex flex-row lg:text-lg text-slate-500 gap-2 xl:gap-4">
             {navTabs.map(navTab => (
                 <li
@@ -56,7 +58,7 @@ const Navigation: FC<OwnProps> = ({activeTabKey, handleTabChange}) => {
             ))}
         </ul>
     </nav>
-}
+);
 
 export default Navigation
 
