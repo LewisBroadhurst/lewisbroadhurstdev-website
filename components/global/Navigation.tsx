@@ -1,31 +1,17 @@
 import React, {FC} from 'react'
-import {
-    GithubOutlined,
-    LinkedinFilled,
-    MediumSquareFilled,
-    YoutubeFilled,
-} from '@ant-design/icons'
-import {SocialItem} from '@/components/home/HomeTypes'
 
 enum NavigationTabs {
-    SERVICES = 'Services',
+    MENTORING = 'Mentoring',
     CV = 'CV',
     BLOG = 'Blog',
     PROJECTS = 'Projects',
 }
 
 const navTabs: NavigationTabs[] = [
-    NavigationTabs.SERVICES,
+    NavigationTabs.MENTORING,
     NavigationTabs.CV,
     NavigationTabs.BLOG,
     NavigationTabs.PROJECTS,
-]
-
-const socials: SocialItem[] = [
-    {icon: <LinkedinFilled/>, href: 'https://www.linkedin.com/in/lewis-broadhurst/'},
-    {icon: <GithubOutlined/>, href: 'https://github.com/LewisBroadhurst'},
-    {icon: <YoutubeFilled/>, href: 'https://www.youtube.com/channel/UCv8iDXiyBoaNRtPmFt-fOYw'},
-    {icon: <MediumSquareFilled/>, href: 'https://medium.com/@lewis1broadhurst'},
 ]
 
 type OwnProps = {
@@ -34,27 +20,15 @@ type OwnProps = {
 }
 
 const Navigation: FC<OwnProps> = ({activeTabKey, handleTabChange}) => (
-    <nav className="flex flex-col lg:flex-row lg:items-center lg:gap-4 xl:gap-12">
-        <ul className="flex flex-row lg:text-lg text-slate-500 gap-2 xl:gap-4">
+    <nav className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
+        <ul className="flex flex-row lg:text-lg text-[var(--gold-7)] gap-2 xl:gap-4">
             {navTabs.map(navTab => (
                 <li
-                    className={`duration-200 transition-all hover:text-orange-700 hover:cursor-pointer ${activeTabKey === navTab && 'text-orange-600'}`}
+                    className={`duration-200 transition-all hover:text-[var(--gold-9)] hover:cursor-pointer ${activeTabKey === navTab && 'text-[var(--gold-9)]'}`}
                     id={navTab} key={navTab} onClick={handleTabChange}
                 >
                     {navTab}
                 </li>
-            ))}
-        </ul>
-        <ul className='flex flex-row gap-2 lg:text-lg text-slate-500'>
-            {socials.map(social => (
-                <a
-                    href={social.href}
-                    className="duration-200 transition-all hover:text-orange-700 hover:cursor-pointer"
-                    key={social.href}
-                    target="_blank"
-                >
-                    {social.icon}
-                </a>
             ))}
         </ul>
     </nav>
