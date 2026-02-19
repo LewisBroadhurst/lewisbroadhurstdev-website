@@ -16,9 +16,9 @@ export default function page() {
 
     return (
         <main className="flex flex-col pt-10">
-            <section className="flex flex-col gap-8 lg:gap-10">
+            <section className="flex flex-col gap-8 md:gap-10">
                 <SectionLayout>
-                    <section className="flex flex-col gap-2 lg:justify-between lg:flex-row">
+                    <section className="flex flex-col gap-2 md:justify-between md:flex-row">
                         <Header/>
                         <Navigation activeTabKey={activeTabKey} handleTabChange={handleTabChange}/>
                     </section>

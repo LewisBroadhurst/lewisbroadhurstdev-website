@@ -20,18 +20,16 @@ type OwnProps = {
 }
 
 const Navigation: FC<OwnProps> = ({activeTabKey, handleTabChange}) => (
-    <nav className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
-        <ul className="flex flex-row lg:text-lg text-[var(--gold-7)] gap-2 xl:gap-4">
-            {navTabs.map(navTab => (
-                <li
-                    className={`duration-200 transition-all hover:text-[var(--gold-9)] hover:cursor-pointer ${activeTabKey === navTab && 'text-[var(--gold-9)]'}`}
-                    id={navTab} key={navTab} onClick={handleTabChange}
-                >
-                    {navTab}
-                </li>
-            ))}
-        </ul>
-    </nav>
+    <ul className="flex flex-row items-center text-[var(--gold-7)] gap-2 md:gap-4 lg:text-lg">
+        {navTabs.map(navTab => (
+            <li
+                className={`duration-200 transition-all hover:text-[var(--gold-9)] hover:cursor-pointer ${activeTabKey === navTab && 'text-[var(--gold-9)]'}`}
+                id={navTab} key={navTab} onClick={handleTabChange}
+            >
+                {navTab}
+            </li>
+        ))}
+    </ul>
 );
 
 export default Navigation
