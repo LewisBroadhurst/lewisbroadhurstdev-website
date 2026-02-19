@@ -19,6 +19,7 @@ const Mentoring = () => (
                 <Button
                     size={{initial: "3", xs: "4"}}
                     className='hover:cursor-pointer'
+                    onClick={() => window.open('https://calendly.com/lewis1broadhurst/15min', '_blank')}
                 >
                     Book an Intro call
                 </Button>
@@ -38,6 +39,7 @@ const Mentoring = () => (
                 <Button
                     size={{initial: "3", xs: "4"}}
                     className='hover:cursor-pointer'
+                    onClick={() => window.open('https://calendly.com/lewis1broadhurst/15min', '_blank')}
                 >
                     Get Started
                 </Button>
