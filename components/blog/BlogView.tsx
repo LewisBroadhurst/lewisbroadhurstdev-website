@@ -87,7 +87,7 @@ const publishedContentPreview: CardContents[] = [
 const BlogView = () => {
     const contentToRender = publishedContentPreview.map(pc => (
         <ContentPreview
-            key={pc.date}
+            key={`${pc.date}_${Math.random()}`}
             url={pc.url}
             title={pc.title}
             description={pc.description}
@@ -101,7 +101,7 @@ const BlogView = () => {
         (acc, pc, index) => {
             acc[index % 2].push(
                 <ContentPreview
-                    key={pc.date}
+                    key={`${pc.date}_${Math.random()}`}
                     url={pc.url}
                     title={pc.title}
                     description={pc.description}

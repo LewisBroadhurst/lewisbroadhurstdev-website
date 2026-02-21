@@ -32,7 +32,7 @@ const ContentPreview: FC<OwnProps> = ({
                 <section className="flex flex-col gap-2 justify-between xl:items-center md:flex-row">
                     <section className="flex flex-row gap-2 font-medium xl:justify-end">
                         {tags.map(tag => (
-                            <Badge key={tag} color='orange'>
+                            <Badge key={`tag_${Math.random()}`} color='orange'>
                                 {tag}
                             </Badge>
                         ))}
