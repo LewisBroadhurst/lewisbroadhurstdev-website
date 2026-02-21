@@ -5,7 +5,8 @@ import LEVELGROUND from './assets/LEVELGROUND.png'
 import KENTCDODDS from './assets/KENTCDODDS.png'
 import PYTHONTRADINGBOT from './assets/PYTHONTRADINGBOT.jpg'
 import FUNAT5 from './assets/FUNAT5.png'
-import { CardContents } from '@/components/home/HomeTypes'
+import {CardContents} from '@/components/home/HomeTypes'
+import SectionLayout from "@/components/layout/SectionLayout";
 
 const contentToRender: CardContents[] = [
     {
@@ -29,7 +30,7 @@ const contentToRender: CardContents[] = [
         description: (
             <p>
                 Tasked with building an app that would improve DEI in the workspace, I worked in a team of 3 to build
-                an app that would allow colleagues to vote on ideas for social events. Note only the frontend is hosted 
+                an app that would allow colleagues to vote on ideas for social events. Note only the frontend is hosted
                 and is not connected to the server, therefore the login/register functionality will not work.
             </p>
         ),
@@ -81,7 +82,7 @@ const contentToRender: CardContents[] = [
 
 const Projects = () => {
     const content = contentToRender.map(project => {
-        const { url, title, description, date, image, tags } = project
+        const {url, title, description, date, image, tags} = project
         return <ContentPreview
             key={title}
             date={date}
@@ -111,13 +112,13 @@ const Projects = () => {
         [[], []]
     );
 
-    return <>
-        <section className="grid gap-5 lg:hidden">{content}</section>
-        <section className="hidden lg:grid lg:gap-5 lg:grid-cols-2">
+    return <SectionLayout>
+        <section className="grid gap-5 md:hidden">{content}</section>
+        <section className="hidden md:grid lg:pb-10 lg:gap-5 lg:grid-cols-2">
             <section className='flex flex-col gap-5'>{leftColumn}</section>
             <section className='flex flex-col gap-5'>{rightColumn}</section>
         </section>
-    </>;
+    </SectionLayout>;
 }
 
 export default Projects

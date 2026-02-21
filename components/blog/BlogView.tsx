@@ -4,8 +4,9 @@ import UNISWAPP2 from './assets/UNISWAPP2.webp'
 import ERC20 from './assets/ERC20.webp'
 import TAILWIND from './assets/Tailwind.jpg'
 import FLEXBOX from './assets/Flexbox.jpg'
-import { CardContents } from '@/components/home/HomeTypes'
+import {CardContents} from '@/components/home/HomeTypes'
 import ContentPreview from '../global/ContentPreview'
+import SectionLayout from "@/components/layout/SectionLayout";
 
 const publishedContentPreview: CardContents[] = [
     {
@@ -71,8 +72,10 @@ const publishedContentPreview: CardContents[] = [
         title: 'Tailwind CSS Tutorial',
         description: (
             <p>
-                Tailwind is a utility first styling framework, allowing you confine your CSS to your HTML equivalent file (basically direct inline styling but a whole lot better). 
-                In this 90min tutorial, I recreate a basic website from my coding bootcamp using HTML, Tailwind, and a little JS.
+                Tailwind is a utility first styling framework, allowing you confine your CSS to your HTML equivalent
+                file (basically direct inline styling but a whole lot better).
+                In this 90min tutorial, I recreate a basic website from my coding bootcamp using HTML, Tailwind, and a
+                little JS.
             </p>
         ),
         date: 'Aug 2022',
@@ -84,7 +87,7 @@ const publishedContentPreview: CardContents[] = [
 const BlogView = () => {
     const contentToRender = publishedContentPreview.map(pc => (
         <ContentPreview
-            key={pc.date}
+            key={`${pc.date}_${Math.random()}`}
             url={pc.url}
             title={pc.title}
             description={pc.description}
@@ -98,7 +101,7 @@ const BlogView = () => {
         (acc, pc, index) => {
             acc[index % 2].push(
                 <ContentPreview
-                    key={pc.date}
+                    key={`${pc.date}_${Math.random()}`}
                     url={pc.url}
                     title={pc.title}
                     description={pc.description}
@@ -112,13 +115,13 @@ const BlogView = () => {
         [[], []]
     );
 
-    return <>
-        <section className="grid gap-5 lg:hidden">{contentToRender}</section>
-        <section className="hidden lg:grid lg:gap-5 lg:grid-cols-2">
+    return <SectionLayout>
+        <section className="grid gap-5 md:hidden">{contentToRender}</section>
+        <section className="hidden md:grid lg:pb-10 lg:gap-5 lg:grid-cols-2">
             <section className='flex flex-col gap-5'>{leftColumn}</section>
             <section className='flex flex-col gap-5'>{rightColumn}</section>
         </section>
-    </>;
+    </SectionLayout>;
 }
 
 export default BlogView
