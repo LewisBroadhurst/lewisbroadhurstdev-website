@@ -21,7 +21,7 @@ const socials: SocialItem[] = [
 const Footer = () => (
     <SectionLayout>
         <Separator my='0' size='4'/>
-        <footer className='flex flex-row items-center justify-between text-[var(--gold-8)] py-8'>
+        <footer className='text-sm sm:text-base flex flex-row items-center justify-between text-[var(--gold-8)] py-8'>
             <span>Lewis Broadhurst - 2026</span>
             <ul className='flex flex-row gap-2 lg:text-lg'>
                 {socials.map(social => (
