@@ -5,7 +5,6 @@ import Navigation, {NavigationTabs} from '@/components/global/Navigation'
 import ProjectView from '@/components/projects/ProjectsView'
 import BlogView from '@/components/blog/BlogView'
 import CVView from "@/components/home/CVView";
-import MentoringView from "@/components/mentoring/MentoringView";
 import SectionLayout from "@/components/layout/SectionLayout";
 import Footer from "@/components/footer/Footer";
 
@@ -27,7 +26,6 @@ const TabbedPage = ({defaultTab}: Props) => {
                     </section>
                 </SectionLayout>
                 {
-                    (activeTabKey === NavigationTabs.MENTORING && <MentoringView/>) ||
                     (activeTabKey === NavigationTabs.CV && <CVView/>) ||
                     (activeTabKey === NavigationTabs.BLOG && <BlogView/>) ||
                     (activeTabKey === NavigationTabs.PROJECTS && <ProjectView/>)
