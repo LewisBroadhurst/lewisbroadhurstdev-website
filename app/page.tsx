@@ -1,6 +1,5 @@
-import TabbedPage from '@/components/layout/TabbedPage'
-import {NavigationTabs} from '@/components/global/Navigation'
+import { redirect } from 'next/navigation';
 
 export default function page() {
-    return <TabbedPage defaultTab={NavigationTabs.CV}/>
+	redirect('/cv');
 }

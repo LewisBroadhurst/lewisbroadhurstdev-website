@@ -1,35 +1,41 @@
-import React, {FC} from 'react'
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 enum NavigationTabs {
-    CV = 'CV',
-    BLOG = 'Blog',
-    PROJECTS = 'Projects',
+	CV = 'CV',
+	BLOG = 'Blog',
+	PROJECTS = 'Projects',
 }
 
-const navTabs: NavigationTabs[] = [
-    NavigationTabs.CV,
-    NavigationTabs.BLOG,
-    NavigationTabs.PROJECTS,
-]
+const navRoutes: Record<NavigationTabs, string> = {
+	[NavigationTabs.CV]: '/cv',
+	[NavigationTabs.BLOG]: '/blog',
+	[NavigationTabs.PROJECTS]: '/projects',
+};
 
-type OwnProps = {
-    activeTabKey: string;
-    handleTabChange: any;
-}
+const navTabs: NavigationTabs[] = [NavigationTabs.CV, NavigationTabs.BLOG, NavigationTabs.PROJECTS];
 
-const Navigation: FC<OwnProps> = ({activeTabKey, handleTabChange}) => (
-    <ul className="flex flex-row items-center text-[var(--gold-7)] gap-2 md:gap-4 lg:text-lg">
-        {navTabs.map(navTab => (
-            <li
-                className={`duration-200 transition-all hover:text-[var(--gold-9)] hover:cursor-pointer ${activeTabKey === navTab && 'text-[var(--gold-9)]'}`}
-                id={navTab} key={navTab} onClick={handleTabChange}
-            >
-                {navTab}
-            </li>
-        ))}
-    </ul>
-);
+const Navigation = () => {
+	const pathname = usePathname();
 
-export default Navigation
+	return (
+		<ul className="flex flex-row items-center text-[var(--gold-7)] gap-2 md:gap-4 lg:text-lg">
+			{navTabs.map(navTab => (
+				<li key={navTab}>
+					<Link
+						href={navRoutes[navTab]}
+						className={`duration-200 transition-all hover:text-[var(--gold-9)] ${pathname === navRoutes[navTab] ? 'text-[var(--gold-9)]' : ''}`}
+					>
+						{navTab}
+					</Link>
+				</li>
+			))}
+		</ul>
+	);
+};
 
-export {NavigationTabs}
+export default Navigation;
+
+export { NavigationTabs };
