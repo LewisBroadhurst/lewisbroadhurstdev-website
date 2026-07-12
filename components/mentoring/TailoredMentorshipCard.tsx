@@ -1,8 +1,8 @@
 import React from 'react';
-import {Card} from "@radix-ui/themes/dist/esm";
+import {Card} from "@radix-ui/themes";
 
 type Props = {
-    icon: JSX.Element,
+    icon: React.JSX.Element,
     title: string,
     text: string
 }

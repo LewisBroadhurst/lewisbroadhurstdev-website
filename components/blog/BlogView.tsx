@@ -97,7 +97,7 @@ const BlogView = () => {
         />
     ));
 
-    const [leftColumn, rightColumn] = publishedContentPreview.reduce<[JSX.Element[], JSX.Element[]]>(
+    const [leftColumn, rightColumn] = publishedContentPreview.reduce<[React.JSX.Element[], React.JSX.Element[]]>(
         (acc, pc, index) => {
             acc[index % 2].push(
                 <ContentPreview

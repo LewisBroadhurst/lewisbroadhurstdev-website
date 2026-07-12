@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f72860ba-96e2-4f39-be42-e8e6be14e9a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+    <list default="true" id="f72860ba-96e2-4f39-be42-e8e6be14e9a0" name="Changes" comment="Add workspace configuration file for project settings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blog/BlogView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/blog/BlogView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mentoring/MentoringView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mentoring/MentoringView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mentoring/TailoredMentorshipCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mentoring/TailoredMentorshipCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/projects/ProjectsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects/ProjectsView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,28 +28,33 @@
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="mentorship-standalone-page" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "LewisBroadhurst"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LewisBroadhurst&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LewisBroadhurst/lewisbroadhurstdev-website.git",
-    "accountId": "5d1aa4c4-c5f2-4681-a392-4d7aaf0222f6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LewisBroadhurst/lewisbroadhurstdev-website.git&quot;,
+    &quot;accountId&quot;: &quot;5d1aa4c4-c5f2-4681-a392-4d7aaf0222f6&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3GOqIbnPt3rlhSMTBmRRtj6byWt" />
   <component name="ProjectSessionTemplates">
     <option name="panelTemplate">
@@ -67,12 +78,14 @@
   "keyToString": {
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "copilot.chat.legacySessionMetadata.migrated": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
@@ -83,6 +96,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\lbroa\\Workspace\\lewisbroadhurstdev-website\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -115,11 +129,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1783852884701</updated>
-      <workItem from="1783852887078" duration="659000" />
+      <workItem from="1783852887078" duration="963000" />
     </task>
+    <task id="LOCAL-00001" summary="Add workspace configuration file for project settings">
+      <option name="closed" value="true" />
+      <created>1783853716469</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783853716469</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add workspace configuration file for project settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add workspace configuration file for project settings" />
   </component>
 </project>

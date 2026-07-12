@@ -94,7 +94,7 @@ const Projects = () => {
         />
     });
 
-    const [leftColumn, rightColumn] = contentToRender.reduce<[JSX.Element[], JSX.Element[]]>(
+    const [leftColumn, rightColumn] = contentToRender.reduce<[React.JSX.Element[], React.JSX.Element[]]>(
         (acc, pc, index) => {
             acc[index % 2].push(
                 <ContentPreview
