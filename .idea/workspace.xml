@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f72860ba-96e2-4f39-be42-e8e6be14e9a0" name="Changes" comment="Add workspace configuration file for project settings">
+    <list default="true" id="d4fc46c2-1819-4235-8d8d-fe0f2d7a497a" name="Changes" comment="Refactor TypeScript types and update package dependencies">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/learn-english/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/learnEnglish/LearnEnglishView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blog/BlogView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/blog/BlogView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mentoring/MentoringView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mentoring/MentoringView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mentoring/TailoredMentorshipCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mentoring/TailoredMentorshipCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects/ProjectsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects/ProjectsView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prettier.config.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/prettier.config.cjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,16 @@
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="48" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -50,6 +60,9 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1,
@@ -80,6 +93,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "code.cleanup.on.save": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "copilot.chat.legacySessionMetadata.migrated": "true",
@@ -91,10 +106,14 @@
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/lbroa/Workspace/lewisbroadhurstdev-website",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "C:\\Users\\lbroa\\Workspace\\lewisbroadhurstdev-website\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -139,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783853716469</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactor TypeScript types and update package dependencies">
+      <option name="closed" value="true" />
+      <created>1783856429366</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1783856429366</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +174,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add workspace configuration file for project settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add workspace configuration file for project settings" />
+    <MESSAGE value="Refactor TypeScript types and update package dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor TypeScript types and update package dependencies" />
   </component>
 </project>
