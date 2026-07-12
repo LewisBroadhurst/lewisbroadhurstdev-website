@@ -1,14 +1,12 @@
 import React, {FC} from 'react'
 
 enum NavigationTabs {
-    MENTORING = 'Mentoring',
     CV = 'CV',
     BLOG = 'Blog',
     PROJECTS = 'Projects',
 }
 
 const navTabs: NavigationTabs[] = [
-    NavigationTabs.MENTORING,
     NavigationTabs.CV,
     NavigationTabs.BLOG,
     NavigationTabs.PROJECTS,
