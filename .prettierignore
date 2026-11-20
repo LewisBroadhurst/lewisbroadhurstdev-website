@@ -1,6 +1,5 @@
 node_modules
 .next
-vendor
 data
 public
 package-lock.json

@@ -24,9 +24,12 @@ export function ArchitectureDiagram({ diagram }: { diagram: Project['diagram'] }
 									<Label className="font-mono">
 										<span className="text-brand">{String(i + 1).padStart(2, '0')}</span> {stage.label}
 									</Label>
-									<ul className="flex flex-1 flex-col justify-center gap-2">
+									<ul className="flex flex-1 flex-col gap-2">
 										{stage.nodes.map(node => (
-											<li key={node.title} className="rounded-md border border-border-strong bg-surface px-3 py-2">
+											<li
+												key={node.title}
+												className="flex flex-col justify-center rounded-md border border-border-strong bg-surface px-3 py-2 md:flex-1"
+											>
 												<p className="text-sm font-medium text-foreground">{node.title}</p>
 												{node.note && <p className="text-xs text-muted-foreground">{node.note}</p>}
 											</li>

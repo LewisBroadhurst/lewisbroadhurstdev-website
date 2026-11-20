@@ -1,6 +1,6 @@
 @import 'tailwindcss';
-/* @big-shared/ui's tokens and base rules, vendored until the package is on npm: vendor/big-shared-ui/README.md */
-@import '../vendor/big-shared-ui/theme.css';
+/* @big-shared/ui's tokens and base rules, from npm. */
+@import '@big-shared/ui/theme.css';
 
 @theme inline {
 	--font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;

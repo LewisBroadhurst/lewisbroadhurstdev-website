@@ -18,14 +18,14 @@ export function ProjectCard({ project, fact, index }: { project: Project; fact: 
 					<p className="text-sm leading-relaxed text-subtle-foreground">{project.tagline}</p>
 					<Chips items={project.stack.slice(0, 4)} className="mt-auto pt-2" />
 				</div>
-				<div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-t border-border px-5 py-3 text-xs">
+				<div className="flex items-center justify-between gap-3 border-t border-border px-5 py-3 text-xs">
 					{fact ? (
-						<span className="flex items-center gap-2 text-muted-foreground">
+						<span className="flex min-w-0 items-center gap-2 text-muted-foreground">
 							<span className="relative flex size-1.5 shrink-0" aria-hidden="true">
 								<span className="absolute inline-flex size-full animate-ping rounded-full bg-brand opacity-50 motion-reduce:animate-none" />
 								<span className="relative inline-flex size-1.5 rounded-full bg-brand" />
 							</span>
-							<span>
+							<span className="truncate">
 								{fact.label} <span className="font-mono text-emphasis-foreground">{fact.value}</span>
 							</span>
 						</span>

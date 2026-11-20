@@ -15,8 +15,7 @@
 		"jsx": "react-jsx",
 		"incremental": true,
 		"paths": {
-			"@/*": ["./*"],
-			"@big-shared/ui/*": ["./vendor/big-shared-ui/src/*"]
+			"@/*": ["./*"]
 		},
 		"plugins": [
 			{

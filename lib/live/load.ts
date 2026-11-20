@@ -23,7 +23,7 @@ const githubHeaders = (): Record<string, string> =>
 async function stratdeckFact(): Promise<LiveFact | null> {
 	const res = await getJson('https://www.stratdeck.uk/api/stocks/shortlist');
 	const leaders = res && res.status === 200 ? shortlistLeaders(res.json) : null;
-	return leaders ? { label: 'Today’s shortlist', value: leaders.join(' · '), href: 'https://www.stratdeck.uk' } : null;
+	return leaders ? { label: 'Shortlist', value: leaders.join(' · '), href: 'https://www.stratdeck.uk' } : null;
 }
 
 async function npmFact(): Promise<LiveFact> {
