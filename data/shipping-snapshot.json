@@ -1,0 +1,240 @@
+{
+	"login": "LewisBroadhurst",
+	"generatedAt": "2026-11-20",
+	"candles": [
+		{
+			"weekStart": "2026-05-25",
+			"open": 0,
+			"high": 0,
+			"low": 0,
+			"close": 0,
+			"total": 0,
+			"mergedPRs": 0
+		},
+		{
+			"weekStart": "2026-06-01",
+			"open": 0,
+			"high": 0,
+			"low": 0,
+			"close": 0,
+			"total": 0,
+			"mergedPRs": 0
+		},
+		{
+			"weekStart": "2026-06-08",
+			"open": 0,
+			"high": 2,
+			"low": 0,
+			"close": 0.3,
+			"total": 2,
+			"mergedPRs": 0
+		},
+		{
+			"weekStart": "2026-06-15",
+			"open": 0.3,
+			"high": 18,
+			"low": 0,
+			"close": 4.3,
+			"total": 30,
+			"mergedPRs": 0
+		},
+		{
+			"weekStart": "2026-06-22",
+			"open": 4.3,
+			"high": 4.3,
+			"low": 0,
+			"close": 0,
+			"total": 0,
+			"mergedPRs": 0
+		},
+		{
+			"weekStart": "2026-06-29",
+			"open": 0,
+			"high": 0,
+			"low": 0,
+			"close": 0,
+			"total": 0,
+			"mergedPRs": 0
+		},
+		{
+			"weekStart": "2026-07-06",
+			"open": 0,
+			"high": 19,
+			"low": 0,
+			"close": 2.7,
+			"total": 19,
+			"mergedPRs": 4
+		},
+		{
+			"weekStart": "2026-07-13",
+			"open": 2.7,
+			"high": 48,
+			"low": 0,
+			"close": 12.1,
+			"total": 85,
+			"mergedPRs": 15
+		},
+		{
+			"weekStart": "2026-07-20",
+			"open": 12.1,
+			"high": 64,
+			"low": 0,
+			"close": 21.1,
+			"total": 148,
+			"mergedPRs": 38
+		},
+		{
+			"weekStart": "2026-07-27",
+			"open": 21.1,
+			"high": 63,
+			"low": 0,
+			"close": 28.1,
+			"total": 197,
+			"mergedPRs": 37
+		},
+		{
+			"weekStart": "2026-08-03",
+			"open": 28.1,
+			"high": 86,
+			"low": 24,
+			"close": 42.4,
+			"total": 297,
+			"mergedPRs": 62
+		},
+		{
+			"weekStart": "2026-08-10",
+			"open": 42.4,
+			"high": 108,
+			"low": 0,
+			"close": 47,
+			"total": 329,
+			"mergedPRs": 69
+		},
+		{
+			"weekStart": "2026-08-17",
+			"open": 47,
+			"high": 108,
+			"low": 0,
+			"close": 41.6,
+			"total": 291,
+			"mergedPRs": 61
+		},
+		{
+			"weekStart": "2026-08-24",
+			"open": 41.6,
+			"high": 78,
+			"low": 20,
+			"close": 39.6,
+			"total": 277,
+			"mergedPRs": 89
+		},
+		{
+			"weekStart": "2026-08-31",
+			"open": 39.6,
+			"high": 308,
+			"low": 18,
+			"close": 98.7,
+			"total": 691,
+			"mergedPRs": 124
+		},
+		{
+			"weekStart": "2026-09-07",
+			"open": 98.7,
+			"high": 98.7,
+			"low": 17,
+			"close": 38.1,
+			"total": 267,
+			"mergedPRs": 75
+		},
+		{
+			"weekStart": "2026-09-14",
+			"open": 38.1,
+			"high": 108,
+			"low": 35,
+			"close": 61.3,
+			"total": 429,
+			"mergedPRs": 95
+		},
+		{
+			"weekStart": "2026-09-21",
+			"open": 61.3,
+			"high": 87,
+			"low": 14,
+			"close": 53.6,
+			"total": 375,
+			"mergedPRs": 160
+		},
+		{
+			"weekStart": "2026-09-28",
+			"open": 53.6,
+			"high": 108,
+			"low": 38,
+			"close": 64,
+			"total": 448,
+			"mergedPRs": 108
+		},
+		{
+			"weekStart": "2026-10-05",
+			"open": 64,
+			"high": 108,
+			"low": 8,
+			"close": 44.7,
+			"total": 313,
+			"mergedPRs": 117
+		},
+		{
+			"weekStart": "2026-10-12",
+			"open": 44.7,
+			"high": 51,
+			"low": 9,
+			"close": 26.4,
+			"total": 185,
+			"mergedPRs": 86
+		},
+		{
+			"weekStart": "2026-10-19",
+			"open": 26.4,
+			"high": 33,
+			"low": 0,
+			"close": 14.1,
+			"total": 99,
+			"mergedPRs": 49
+		},
+		{
+			"weekStart": "2026-10-26",
+			"open": 14.1,
+			"high": 56,
+			"low": 14.1,
+			"close": 33.4,
+			"total": 234,
+			"mergedPRs": 111
+		},
+		{
+			"weekStart": "2026-11-02",
+			"open": 33.4,
+			"high": 35,
+			"low": 4,
+			"close": 21.1,
+			"total": 148,
+			"mergedPRs": 72
+		},
+		{
+			"weekStart": "2026-11-09",
+			"open": 21.1,
+			"high": 82,
+			"low": 7,
+			"close": 22.7,
+			"total": 159,
+			"mergedPRs": 78
+		},
+		{
+			"weekStart": "2026-11-16",
+			"open": 22.7,
+			"high": 22.7,
+			"low": 0,
+			"close": 7,
+			"total": 35,
+			"mergedPRs": 12
+		}
+	]
+}
