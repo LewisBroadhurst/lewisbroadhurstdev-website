@@ -1,0 +1,248 @@
+/*
+  @big-shared/ui's look: the colour, type, radius and shadow tokens StratDeck and
+  Crypto Charts share, and the base rules every page keeps. Import it right after
+  Tailwind:
+
+    @import "tailwindcss";
+    @import "@big-shared/ui/theme.css";
+
+  The @source below lets Tailwind find the classes the components use.
+*/
+@source "./src/**/*.{ts,tsx}";
+
+/*
+  This package's components, and the apps that import this file, reference only
+  these names, which is what makes a palette change one edit here instead of a
+  grep across both apps.
+
+  Dark only, deliberately: `color-scheme` is fixed below and neither app has a
+  light mode, so there is no second block to keep in step. A light theme would
+  redefine these same names under a `:root[data-theme="light"]` selector and
+  nothing in the components would move.
+
+  The scales of type, line height, letter spacing, radius and shadow sit in
+  the second `@theme` block below.
+*/
+:root {
+  color-scheme: dark;
+
+  --background: oklch(14.5% 0 none); /* neutral-950 -- the page */
+  --surface: oklch(20.5% 0 none); /* neutral-900 -- solid panels, menus */
+  --card: oklch(20.5% 0 none / 0.6); /* neutral-900/60 -- cards on the page */
+  --popover: oklch(20.5% 0 none); /* neutral-900 -- must stay opaque */
+
+  /*
+    The text ramp, brightest to faintest. Seven steps, one per shade the board
+    actually reaches for: a heading, an emphasised value or link, body copy, a
+    secondary line, metadata, a receded label, and a control that is off.
+  */
+  --foreground: oklch(97% 0 none); /* neutral-100 -- headings, values */
+  --emphasis-foreground: oklch(92.2% 0 none); /* neutral-200 -- a value */
+  --body-foreground: oklch(87% 0 none); /* neutral-300 -- body copy */
+  --subtle-foreground: oklch(70.8% 0 none); /* neutral-400 -- secondary copy */
+  --muted-foreground: oklch(55.6% 0 none); /* neutral-500 -- metadata */
+  --faint-foreground: oklch(43.9% 0 none); /* neutral-600 -- receded labels */
+  --disabled-foreground: oklch(37.1% 0 none); /* neutral-700 -- switched off */
+
+  /* Primary action: the emerald button, hovering lighter rather than darker. */
+  --primary: oklch(50.8% 0.118 165.612); /* emerald-700 */
+  --primary-hover: oklch(59.6% 0.145 163.225); /* emerald-600 */
+  --primary-foreground: #fff;
+
+  /* A filled neutral chip or an active toolbar trigger. */
+  --secondary: oklch(26.9% 0 none); /* neutral-800 */
+  --secondary-strong: oklch(37.1% 0 none); /* neutral-700 -- a counter, a bar */
+  --secondary-foreground: oklch(97% 0 none); /* neutral-100 */
+
+  /* The text a ghost control hovers to. */
+  --accent-foreground: var(--emphasis-foreground);
+
+  /*
+    Brand, the lighter emerald: eyebrows, step labels, the theme pill. Distinct
+    from `--primary`, which only ever backs a button. `--brand-wash` is the tint
+    the theme section's radial gradient blooms with.
+  */
+  --brand: oklch(76.5% 0.177 163.223); /* emerald-400 */
+  --brand-strong: oklch(69.6% 0.17 162.48); /* emerald-500 -- an icon, a tick */
+  --brand-foreground: oklch(26.2% 0.051 172.552); /* emerald-950 */
+  --brand-wash: oklch(76.5% 0.177 163.223 / 0.1);
+
+  /*
+    Market tone: the green, red, amber and blue a reading earns. Three steps
+    each, and every tone uses all three -- the base tints a figure (`signedTone`
+    in `lib/format.ts`), `-surface` backs a chip at /10--/20 and rings it at
+    /20--/30, and `-strong` is the text standing on that chip.
+
+    `--neutral-surface` is the same chip with no reading at all, and
+    `--destructive` backs a button that destroys something, which no market
+    figure ever does.
+  */
+  --positive: oklch(76.5% 0.177 163.223); /* emerald-400 */
+  --positive-surface: oklch(69.6% 0.17 162.48); /* emerald-500 */
+  --positive-strong: oklch(84.5% 0.143 164.978); /* emerald-300 */
+  --negative: oklch(71.2% 0.194 13.428); /* rose-400 */
+  --negative-surface: oklch(64.5% 0.246 16.439); /* rose-500 */
+  --negative-strong: oklch(81% 0.117 11.638); /* rose-300 */
+  --caution: oklch(82.8% 0.189 84.429); /* amber-400 */
+  --caution-surface: oklch(76.9% 0.188 70.08); /* amber-500 */
+  --caution-strong: oklch(87.9% 0.169 91.605); /* amber-300 */
+  --info: oklch(74.6% 0.16 232.661); /* sky-400 */
+  --info-surface: oklch(68.5% 0.169 237.323); /* sky-500 */
+  --info-strong: oklch(82.8% 0.111 230.318); /* sky-300 */
+  --neutral-surface: oklch(55.6% 0 none); /* neutral-500 */
+  --destructive: oklch(58.6% 0.253 17.585); /* rose-600 */
+
+  /*
+    Lines, faintest to brightest: a rule between sections, the resting edge of
+    a control, that edge hovered, a control switched on, and the brightest edge
+    a large secondary button reaches on hover.
+  */
+  --border-faint: oklch(20.5% 0 none); /* neutral-900 */
+  --border: oklch(26.9% 0 none); /* neutral-800 */
+  --border-strong: oklch(37.1% 0 none); /* neutral-700 */
+  --border-active: oklch(43.9% 0 none); /* neutral-600 -- switched on */
+  --border-bright: oklch(55.6% 0 none); /* neutral-500 */
+  --input: oklch(26.9% 0 none); /* neutral-800 */
+
+  /* Focus: the brand ring, and the quieter one a neutral control wears. */
+  --ring: var(--brand-strong);
+  --ring-muted: oklch(55.6% 0 none); /* neutral-500 */
+}
+
+/*
+  `inline` so the utilities resolve to the variables above rather than copying
+  their values, which keeps one place to change and lets a token be redefined
+  further down the tree.
+*/
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-popover: var(--popover);
+
+  --color-foreground: var(--foreground);
+  --color-emphasis-foreground: var(--emphasis-foreground);
+  --color-body-foreground: var(--body-foreground);
+  --color-subtle-foreground: var(--subtle-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-faint-foreground: var(--faint-foreground);
+  --color-disabled-foreground: var(--disabled-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-strong: var(--secondary-strong);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-wash: var(--brand-wash);
+
+  --color-positive: var(--positive);
+  --color-positive-surface: var(--positive-surface);
+  --color-positive-strong: var(--positive-strong);
+  --color-negative: var(--negative);
+  --color-negative-surface: var(--negative-surface);
+  --color-negative-strong: var(--negative-strong);
+  --color-caution: var(--caution);
+  --color-caution-surface: var(--caution-surface);
+  --color-caution-strong: var(--caution-strong);
+  --color-info: var(--info);
+  --color-info-surface: var(--info-surface);
+  --color-info-strong: var(--info-strong);
+  --color-neutral-surface: var(--neutral-surface);
+  --color-destructive: var(--destructive);
+
+  --color-border-faint: var(--border-faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-active: var(--border-active);
+  --color-border-bright: var(--border-bright);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-muted: var(--ring-muted);
+}
+
+/*
+  The scales. Each namespace is cleared and then given only its steps, so a
+  class off the scale draws nothing. `stratdeck/on-scale` flags an arbitrary
+  value such as `text-[13px]`, a Tailwind step left out such as `shadow-2xl`,
+  and any unknown line-height, letter-spacing or radius name. Add a step here,
+  never a one-off in a component: "Scales" in docs/design-system.md.
+*/
+@theme {
+  /* Type: 10px for small caps and tags, then Tailwind's own steps. */
+  --text-*: initial;
+  --text-2xs: 0.625rem;
+  --text-2xs--line-height: calc(0.875 / 0.625);
+  --text-xs: 0.75rem;
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-sm: 0.875rem;
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-base: 1rem;
+  --text-base--line-height: calc(1.5 / 1);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1;
+
+  /* Line height: tighter the larger the type. `display` sets a headline. */
+  --leading-*: initial;
+  --leading-display: 1.1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  /* Letter spacing: a headline tightens, small caps open out. */
+  --tracking-*: initial;
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-caps: 0.14em;
+
+  /*
+    Radius, one per kind of thing: a mark in a chart, a chip, a control, a
+    board panel or menu, a card. `rounded-full` is a pill or a dot.
+  */
+  --radius-*: initial;
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  /*
+    Shadow, two heights: a menu or tooltip just above the page, and a dialog
+    or drawer well above it. Black at this strength is what shows on a dark
+    page; Tailwind's defaults at 10% vanish.
+  */
+  --shadow-*: initial;
+  --shadow-popover: 0 10px 30px -8px rgb(0 0 0 / 0.6);
+  --shadow-dialog: 0 25px 50px -12px rgb(0 0 0 / 0.6);
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+/* Tailwind 4's preflight gives buttons `cursor: default`. */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+}
