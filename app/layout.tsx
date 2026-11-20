@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -52,6 +53,7 @@ gtag('config', '${googleTagId}');`}
 						</Script>
 					</>
 				)}
+				<Analytics />
 			</body>
 		</html>
 	);
