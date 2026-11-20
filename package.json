@@ -13,6 +13,7 @@
 		"format:check": "prettier --check ."
 	},
 	"dependencies": {
+		"@big-shared/ui": "^0.1.0",
 		"@heroicons/react": "^2.2.0",
 		"@radix-ui/react-slot": "^1.2.4",
 		"@types/node": "24.13.3",

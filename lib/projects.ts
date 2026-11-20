@@ -181,7 +181,7 @@ export const projects: Project[] = [
 		year: '2026',
 		role: 'Solo',
 		status: 'In use by StratDeck and this site',
-		links: [],
+		links: [{ label: 'npm', href: 'https://www.npmjs.com/package/@big-shared/ui' }],
 		stack: ['Tailwind 4', 'CSS custom properties', 'React 19', 'TypeScript', 'class-variance-authority', 'Radix Slot'],
 		outcomes: [
 			'One palette change is one edit, picked up by every site that uses it. Crypto Charts is moving onto it next.',

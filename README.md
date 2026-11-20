@@ -3,7 +3,7 @@
 Lewis Broadhurst's portfolio: projects as case studies, a live shipping record from GitHub, the work timeline and CV.
 
 Next.js 16 (App Router), Tailwind 4 and `@big-shared/ui`, the design system shared with StratDeck and Crypto Charts. It is
-vendored in `vendor/big-shared-ui/` until it's published to npm; that folder's README says how to switch.
+installed from npm.
 
 ## Run it
 

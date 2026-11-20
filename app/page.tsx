@@ -36,14 +36,14 @@ export default async function HomePage() {
 						</Button>
 						<Button asChild size="lg">
 							<a href={site.links.github} target="_blank" rel="noreferrer">
-								<GitHubIcon className="size-4" />
-								GitHub
+								<GitHubIcon className="size-4" aria-hidden="true" />
+								<span className="max-sm:sr-only">GitHub</span>
 							</a>
 						</Button>
 						<Button asChild size="lg">
 							<a href={site.links.linkedin} target="_blank" rel="noreferrer">
-								<LinkedInIcon className="size-4" />
-								LinkedIn
+								<LinkedInIcon className="size-4" aria-hidden="true" />
+								<span className="max-sm:sr-only">LinkedIn</span>
 							</a>
 						</Button>
 					</div>
